@@ -1,12 +1,13 @@
 from flask import Flask
 from modules.user import user_bp
 from modules.experience import experience_bp
+from modules.education import education_bp
 import modules.db as db
 
 app = Flask(__name__)
 app.register_blueprint(user_bp, url_prefix="/user")
-app.register_blueprint(experience_bp, url_prefix="/user")
-app.register_blueprint(user_bp, url_prefix="/user")
+app.register_blueprint(experience_bp, url_prefix="/experience")
+app.register_blueprint(education_bp, url_prefix="/education")
 
 
 # test to insert data to the data base
