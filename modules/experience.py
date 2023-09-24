@@ -14,9 +14,9 @@ def query():
     return jsonify(result)
 
 
-@experience_bp.route("/create")
+@experience_bp.route("/create", methods=["POST"])
 def create():
-    args = request.args.to_dict()
+    args = request.json
     database = DB()
     result = database.createUserExperience(args)
 

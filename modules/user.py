@@ -14,9 +14,9 @@ def query():
     return jsonify(result)
 
 
-@user_bp.route("/create")
+@user_bp.route("/create", methods=["POST"])
 def create():
-    args = request.args.to_dict()
+    args = request.json
     database = DB()
     result = database.createUserInfo(args)
 
