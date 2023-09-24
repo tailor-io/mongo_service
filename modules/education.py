@@ -9,7 +9,6 @@ def query():
     args = request.args
     database = DB()
     result = database.getUserEducation(args["user-id"])
-    del result["_id"]
 
     return jsonify(result)
 

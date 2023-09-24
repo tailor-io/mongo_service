@@ -29,7 +29,6 @@ class DB:
         Args:
             user_id (str): _description_
         """
-        print(user_info)
         user_collection = pymongo.collection.Collection(self.database, "personal_info")
         query_result = user_collection.insert_one(user_info)
         return query_result
