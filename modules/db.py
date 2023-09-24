@@ -2,8 +2,7 @@ from flask_pymongo import pymongo
 import os
 import certifi
 
-CONNECTION_STRING = "mongodb+srv://sergio:Cojowa12345@tailor-cluster.q8c3zr9.mongodb.net/?retryWrites=true&w=majority"
-# CONNECTION_STRING = os.getenv("MONGO_URI")
+CONNECTION_STRING = os.getenv("MONGO_URI")
 
 
 class DB:
